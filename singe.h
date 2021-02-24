@@ -9,7 +9,6 @@ class Singe : public Animaux{
     private:
         bool enclos_avec_herbe;
         
-    
     public:
         //Constructeur
         Singe(std::string nom, double poids, bool enclos_avec_herbe);
@@ -17,6 +16,7 @@ class Singe : public Animaux{
         //Affichage
         void afficherSinge();
         
+        //Destructeur
         ~Singe(){};
 };
 

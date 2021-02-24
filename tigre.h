@@ -13,6 +13,7 @@ class Tigre : public Animaux{
         //Affichage
         void afficherTigre();
         
+        //Destructeur
         ~Tigre(){};
 };
 

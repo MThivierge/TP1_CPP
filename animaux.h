@@ -12,7 +12,7 @@ protected:
     
     
 public:
-    //Constructeur avec paramètres
+    //Constructeur
     Animaux(std::string nom, double poids);
     
     //Getters
@@ -20,6 +20,7 @@ public:
         return diete;
     }
     
+    //Destructeur
     virtual ~Animaux(){};
 };
 

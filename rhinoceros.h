@@ -16,6 +16,7 @@ class Rhinoceros : public Animaux{
         //Affichage
         void afficherRhinoceros();
         
+        //Destructeur
         ~Rhinoceros(){};
 };
 
