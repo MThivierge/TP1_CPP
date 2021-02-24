@@ -20,10 +20,10 @@ void Singe::afficherInfos(){
     Animaux::afficherInfos();
     
     if(enclos_avec_herbe){
-        std::cout<<"Enclos avec herbe"<<std::endl;
+        std::cout<<"\tEnclos avec herbe"<<std::endl;
     }
     else{
-        std::cout<<"Enclos sans herbe"<<std::endl;
+        std::cout<<"\tEnclos sans herbe"<<std::endl;
     }
     
     diete.afficherDiete();

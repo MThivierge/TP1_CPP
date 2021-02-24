@@ -28,6 +28,6 @@ Rhinoceros::Rhinoceros(std::string nom, double poids, int espace_enclos) :
 void Rhinoceros::afficherInfos(){
     std::cout<<"Rhinoceros : ";
     Animaux::afficherInfos();
-    std::cout<<"Enclos de "<< espace_enclos <<" metres-carres"<<std::endl;
+    std::cout<<"\tEnclos de "<< espace_enclos <<" metres-carres"<<std::endl;
     diete.afficherDiete();
 }

@@ -15,7 +15,7 @@ Diete::Diete(double quantite_viande, double quantite_fruits, double quantite_her
 */
 
 void Diete::afficherDiete(){
-    std::cout<<"Mange "<< this->quantite_viande <<" kg de viande par jour"<< std::endl;
-    std::cout<<"Mange "<< this->quantite_fruits <<" kg de fruits par jour"<< std::endl;
-    std::cout<<"Mange "<< this->quantite_herbe <<" kg d'herbe par jour"<< std::endl;
+    std::cout<<"\tMange "<< this->quantite_viande <<" kg de viande par jour"<< std::endl;
+    std::cout<<"\tMange "<< this->quantite_fruits <<" kg de fruits par jour"<< std::endl;
+    std::cout<<"\tMange "<< this->quantite_herbe <<" kg d'herbe par jour"<< std::endl;
 }
