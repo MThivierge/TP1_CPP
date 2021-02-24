@@ -1,4 +1,4 @@
-#ifndef __RHINOCEROS_H__
+#ifndef __RHINOCEROS_H__clTabCtrl
 #define __RHINOCEROS_H__
 
 #include <iostream>
@@ -17,7 +17,9 @@ class Rhinoceros : public Animaux{
         void afficherInfos();
         
         //Destructeur
-        ~Rhinoceros(){};
+        ~Rhinoceros(){
+            std::cout<<this->nom<<" a ete enleve"<<std::endl;
+        };
 };
 
 #endif //__RHINOCEROS_H__

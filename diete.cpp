@@ -1,4 +1,5 @@
-#include "diete.h";
+#include "diete.h"
+
 //Constructeur par défaut
 Diete::Diete(){
     this->quantite_viande = 0.0;

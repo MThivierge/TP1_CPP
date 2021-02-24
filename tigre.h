@@ -14,7 +14,9 @@ class Tigre : public Animaux{
         void afficherInfos();
         
         //Destructeur
-        ~Tigre(){};
+        ~Tigre(){
+            std::cout<<this->nom<<" a ete enleve"<<std::endl;
+        };
 };
 
 #endif //__TIGRE_H__

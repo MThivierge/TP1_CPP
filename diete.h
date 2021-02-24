@@ -33,16 +33,21 @@ class Diete{
         }
         
         //Setters
-        setQuantiteViande(double quantite_viande) {
+        void setQuantiteViande(double quantite_viande) {
             this->quantite_viande = quantite_viande;
         }
         
-        setQuantiteFruits(double quantite_fruits) {
+        void setQuantiteFruits(double quantite_fruits) {
             this->quantite_fruits = quantite_fruits;
         }
         
-        setQuantiteHerbe(double quantite_herbe) {
+        void setQuantiteHerbe(double quantite_herbe) {
             this->quantite_herbe = quantite_herbe;
+        }
+        
+        //Destructeur
+        ~Diete(){
+            //std::cout<<"Objet Diete detruit"<<std::endl;
         }
 };
 

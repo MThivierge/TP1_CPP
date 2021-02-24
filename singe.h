@@ -17,7 +17,9 @@ class Singe : public Animaux{
         void afficherInfos();
         
         //Destructeur
-        ~Singe(){};
+        ~Singe(){
+            std::cout<<this->nom<<" a ete enleve"<<std::endl;
+        };
 };
 
 #endif //__SINGE_H__

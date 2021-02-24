@@ -31,6 +31,7 @@ int main()
                     std::string nom;
                     double poids;
                     
+                    std::cout<<"*Ajout d'un nouveau tigre*"<<std::endl;
                     std::cout<<"Entrez le nom du tigre (Sans espaces): ";
                     std::cin>> nom;
                     
@@ -52,6 +53,7 @@ int main()
                     double poids;
                     bool enclos_avec_herbe;
                     
+                    std::cout<<"*Ajout d'un nouveau singe*"<<std::endl;
                     std::cout<<"Entrez le nom du singe (Sans espaces): ";
                     std::cin>> nom;
                     
@@ -76,6 +78,7 @@ int main()
                     double poids;
                     int espace_enclos;
                     
+                    std::cout<<"*Ajout d'un nouveau rhinoceros*"<<std::endl;
                     std::cout<<"Entrez le nom du rhinoceros (Sans espaces): ";
                     std::cin>> nom;
                     
@@ -86,6 +89,7 @@ int main()
                     std::cin>> espace_enclos;
                     
                     animaux_du_parc[nb_animaux] = new Rhinoceros(nom, poids, espace_enclos);
+                    
                     nb_animaux++;
                 }
                 else{
