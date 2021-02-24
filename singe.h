@@ -14,7 +14,7 @@ class Singe : public Animaux{
         Singe(std::string nom, double poids, bool enclos_avec_herbe);
         
         //Affichage
-        void afficherSinge();
+        void afficherInfos();
         
         //Destructeur
         ~Singe(){};

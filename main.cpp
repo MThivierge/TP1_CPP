@@ -12,10 +12,10 @@ int main()
     Singe singe("Bob", 10.5, true);
     Rhinoceros rhino1("Eve", 1812.3, 1000);
     Rhinoceros rhino2("Horny", 2021.5, 6000);
-    tigre.afficherTigre();
-    singe.afficherSinge();
-    rhino1.afficherRhinoceros();
-    rhino2.afficherRhinoceros();
+    tigre.afficherInfos();
+    singe.afficherInfos();
+    rhino1.afficherInfos();
+    rhino2.afficherInfos();
     
     
     do{

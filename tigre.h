@@ -11,7 +11,7 @@ class Tigre : public Animaux{
         Tigre(std::string nom, double poids);
         
         //Affichage
-        void afficherTigre();
+        void afficherInfos();
         
         //Destructeur
         ~Tigre(){};

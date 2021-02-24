@@ -8,7 +8,8 @@ Tigre::Tigre(std::string nom, double poids) :
 }
     
 //Affichage
-void Tigre::afficherTigre(){
-    std::cout<<"Tigre : "<< nom <<" ("<<poids<<")"<<std::endl;
+void Tigre::afficherInfos(){
+    std::cout<<"Tigre : ";
+    Animaux::afficherInfos();
     diete.afficherDiete();
 }

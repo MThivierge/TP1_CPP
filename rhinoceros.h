@@ -14,7 +14,7 @@ class Rhinoceros : public Animaux{
         Rhinoceros(std::string nom, double poids, int enclos);
         
         //Affichage
-        void afficherRhinoceros();
+        void afficherInfos();
         
         //Destructeur
         ~Rhinoceros(){};

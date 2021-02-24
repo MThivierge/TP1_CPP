@@ -15,6 +15,9 @@ public:
     //Constructeur
     Animaux(std::string nom, double poids);
     
+    //Affichage
+    virtual void afficherInfos();
+    
     //Getters
     Diete& getDiete(){
         return diete;

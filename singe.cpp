@@ -15,8 +15,9 @@ Singe::Singe(std::string nom, double poids, bool enclos_avec_herbe) :
 }
     
 //Affichage
-void Singe::afficherSinge(){
-    std::cout<<"Singe : "<< nom <<" ("<<poids<<")"<<std::endl;
+void Singe::afficherInfos(){
+    std::cout<<"Singe : ";
+    Animaux::afficherInfos();
     
     if(enclos_avec_herbe){
         std::cout<<"Enclos avec herbe"<<std::endl;
