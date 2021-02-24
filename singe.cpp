@@ -1,0 +1,29 @@
+#include "singe.h"
+
+//Constructeur
+Singe::Singe(std::string nom, double poids, bool enclos_avec_herbe) : 
+    Animaux::Animaux(nom, poids) {
+        this->enclos_avec_herbe = enclos_avec_herbe;
+        this->diete.setQuantiteViande(poids*1/100);
+        this->diete.setQuantiteFruits(poids*1/100);
+        
+        if(!enclos_avec_herbe){
+            this->diete.setQuantiteHerbe(poids*0.5/100);
+        }
+        
+        std::cout<<"Le singe "<< this->nom <<" a ete ajoute avec succes."<< std::endl;
+}
+    
+//Affichage
+void Singe::afficherSinge(){
+    std::cout<<"Singe : "<< nom <<" ("<<poids<<")"<<std::endl;
+    
+    if(enclos_avec_herbe){
+        std::cout<<"Enclos avec herbe"<<std::endl;
+    }
+    else{
+        std::cout<<"Enclos sans herbe"<<std::endl;
+    }
+    
+    diete.afficherDiete();
+}
