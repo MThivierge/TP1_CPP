@@ -36,10 +36,13 @@ int main()
                     std::cin>> poids;
                     
                     animaux_du_parc[nb_animaux] = new Tigre(nom, poids);
+                    nb_animaux++;
                 }
                 else{
                     std::cout<<"Desole le parc a atteint sa capacite maximale, vous ne pouvez pas ajouter d'autres animaux."<<std::endl;
                 }
+                
+                break;
             }
             case 2:{
                 if(nb_animaux < TAILLE_TABLEAU){
@@ -57,10 +60,13 @@ int main()
                     std::cin>> enclos_avec_herbe;
                     
                     animaux_du_parc[nb_animaux] = new Singe(nom, poids, enclos_avec_herbe);
+                    nb_animaux++;
                 }
                 else{
                     std::cout<<"Desole le parc a atteint sa capacite maximal, vous ne pouvez plus ajouter d'animaux."<<std::endl;
                 }
+                
+                break;
             }
             case 3:{
                 if(nb_animaux < TAILLE_TABLEAU){
@@ -78,21 +84,43 @@ int main()
                     std::cin>> espace_enclos;
                     
                     animaux_du_parc[nb_animaux] = new Rhinoceros(nom, poids, espace_enclos);
+                    nb_animaux++;
                 }
                 else{
                     std::cout<<"Desole le parc a atteint sa capacite maximal, vous ne pouvez plus ajouter d'animaux."<<std::endl;
                 }
+                
+                break;
             }
             case 4:{
                 
+                double total_viande = 0.0;
+                double total_fruits = 0.0;
+                double total_herbe = 0.0;
+                std::cout<<"Compte-rendu du parc:"<<std::endl;
+                for(int i=0 ; i<nb_animaux ; i++){
+                    animaux_du_parc[i]->afficherInfos();
+                    total_viande += animaux_du_parc[i]->getDiete().getQuantiteViande();
+                }
+                
+                break;
             }
             case 5:{
                 std::cout<<"Aurevoir"<<std::endl;
+                
+                break;
             }
             default:{
                 std::cout<<"Reponse invalide. Votre choix doit etre entre 1 et 5."<<std::endl;
+                
+                break;
             }
         };
         
     }while(choix_menu != 5);
+    
+    for(int i=0 ; i<nb_animaux ; i++){
+        delete animaux_du_parc[i];
+        animaux_du_parc[i] = NULL;
+    }
 }
