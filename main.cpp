@@ -7,15 +7,10 @@
 
 int main()
 {
+    const int TAILLE_TABLEAU = 250;
+    Animaux* animaux_du_parc[TAILLE_TABLEAU];
+    int nb_animaux = 0;
     int choix_menu = 0;
-    Tigre tigre("Alice", 120.8);
-    Singe singe("Bob", 10.5, true);
-    Rhinoceros rhino1("Eve", 1812.3, 1000);
-    Rhinoceros rhino2("Horny", 2021.5, 6000);
-    tigre.afficherInfos();
-    singe.afficherInfos();
-    rhino1.afficherInfos();
-    rhino2.afficherInfos();
     
     
     do{
@@ -30,13 +25,63 @@ int main()
         
         switch(choix_menu){
             case 1:{
-                
+                if(nb_animaux < TAILLE_TABLEAU){
+                    std::string nom;
+                    double poids;
+                    
+                    std::cout<<"Entrez le nom du tigre (Sans espaces): ";
+                    std::cin>> nom;
+                    
+                    std::cout<<"Entrez le poids du tigre: ";
+                    std::cin>> poids;
+                    
+                    animaux_du_parc[nb_animaux] = new Tigre(nom, poids);
+                }
+                else{
+                    std::cout<<"Desole le parc a atteint sa capacite maximale, vous ne pouvez pas ajouter d'autres animaux."<<std::endl;
+                }
             }
             case 2:{
-                
+                if(nb_animaux < TAILLE_TABLEAU){
+                    std::string nom;
+                    double poids;
+                    bool enclos_avec_herbe;
+                    
+                    std::cout<<"Entrez le nom du singe (Sans espaces): ";
+                    std::cin>> nom;
+                    
+                    std::cout<<"Entrez le poids du singe: ";
+                    std::cin>> poids;
+                    
+                    std::cout<<"Ce singe a-t-il un enclos avec de l'herbe?( 1=Oui / 0=Non ): ";
+                    std::cin>> enclos_avec_herbe;
+                    
+                    animaux_du_parc[nb_animaux] = new Singe(nom, poids, enclos_avec_herbe);
+                }
+                else{
+                    std::cout<<"Desole le parc a atteint sa capacite maximal, vous ne pouvez plus ajouter d'animaux."<<std::endl;
+                }
             }
             case 3:{
-                
+                if(nb_animaux < TAILLE_TABLEAU){
+                    std::string nom;
+                    double poids;
+                    int espace_enclos;
+                    
+                    std::cout<<"Entrez le nom du rhinoceros (Sans espaces): ";
+                    std::cin>> nom;
+                    
+                    std::cout<<"Entrez le poids du rhinoceros: ";
+                    std::cin>> poids;
+                    
+                    std::cout<<"Entrez l'espace de l'enclos en metres-carres: ";
+                    std::cin>> espace_enclos;
+                    
+                    animaux_du_parc[nb_animaux] = new Rhinoceros(nom, poids, espace_enclos);
+                }
+                else{
+                    std::cout<<"Desole le parc a atteint sa capacite maximal, vous ne pouvez plus ajouter d'animaux."<<std::endl;
+                }
             }
             case 4:{
                 
