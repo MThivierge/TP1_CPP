@@ -23,6 +23,8 @@ int main()
         std::cout<<"Entrez le chiffre correspondant a votre choix: ";
         std::cin>> choix_menu;
         
+        std::cout<<""<<std::endl;
+        
         switch(choix_menu){
             case 1:{
                 if(nb_animaux < TAILLE_TABLEAU){
@@ -41,7 +43,7 @@ int main()
                 else{
                     std::cout<<"Desole le parc a atteint sa capacite maximale, vous ne pouvez pas ajouter d'autres animaux."<<std::endl;
                 }
-                
+
                 break;
             }
             case 2:{
@@ -56,7 +58,7 @@ int main()
                     std::cout<<"Entrez le poids du singe: ";
                     std::cin>> poids;
                     
-                    std::cout<<"Ce singe a-t-il un enclos avec de l'herbe?( 1=Oui / 0=Non ): ";
+                    std::cout<<"Ce singe a-t-il un enclos avec de l'herbe?(1=Oui / 0=Non): ";
                     std::cin>> enclos_avec_herbe;
                     
                     animaux_du_parc[nb_animaux] = new Singe(nom, poids, enclos_avec_herbe);
@@ -65,7 +67,7 @@ int main()
                 else{
                     std::cout<<"Desole le parc a atteint sa capacite maximal, vous ne pouvez plus ajouter d'animaux."<<std::endl;
                 }
-                
+
                 break;
             }
             case 3:{
@@ -89,7 +91,7 @@ int main()
                 else{
                     std::cout<<"Desole le parc a atteint sa capacite maximal, vous ne pouvez plus ajouter d'animaux."<<std::endl;
                 }
-                
+
                 break;
             }
             case 4:{
@@ -101,7 +103,14 @@ int main()
                 for(int i=0 ; i<nb_animaux ; i++){
                     animaux_du_parc[i]->afficherInfos();
                     total_viande += animaux_du_parc[i]->getDiete().getQuantiteViande();
+                    total_fruits += animaux_du_parc[i]->getDiete().getQuantiteFruits();
+                    total_herbe += animaux_du_parc[i]->getDiete().getQuantiteHerbe();
                 }
+                
+                std::cout<<"Diete quotidienne totale : "<<std::endl;
+                std::cout<<"Viande\t: "<<total_viande<<" kg"<<std::endl;
+                std::cout<<"Fruits\t: "<<total_fruits<<" kg"<<std::endl;
+                std::cout<<"Herbe\t: "<<total_herbe<<" kg"<<std::endl;
                 
                 break;
             }
@@ -115,12 +124,13 @@ int main()
                 
                 break;
             }
-        };
+        }; //Fin du switch
+        
+        std::cout<<""<<std::endl;
         
     }while(choix_menu != 5);
     
     for(int i=0 ; i<nb_animaux ; i++){
         delete animaux_du_parc[i];
-        animaux_du_parc[i] = NULL;
     }
 }

@@ -8,5 +8,5 @@ Animaux::Animaux(std::string nom, double poids){
 
 //Affichage
 void Animaux::afficherInfos(){
-    std::cout<< nom <<" ("<<poids<<")"<<std::endl;
+    std::cout<< nom <<" ("<<poids<<" kg)"<<std::endl;
 }
