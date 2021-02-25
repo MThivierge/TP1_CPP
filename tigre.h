@@ -13,6 +13,11 @@ class Tigre : public Animaux{
         //Affichage
         void afficherInfos();
         
+        //Getters
+        Diete& getDiete(){
+            return diete;
+        }
+        
         //Destructeur
         ~Tigre(){
             std::cout<<this->nom<<" a ete enleve"<<std::endl;

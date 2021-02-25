@@ -16,6 +16,11 @@ class Singe : public Animaux{
         //Affichage
         void afficherInfos();
         
+        //Getters
+        Diete& getDiete(){
+            return diete;
+        }
+        
         //Destructeur
         ~Singe(){
             std::cout<<this->nom<<" a ete enleve"<<std::endl;

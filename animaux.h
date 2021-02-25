@@ -19,7 +19,7 @@ public:
     virtual void afficherInfos();
     
     //Getters
-    Diete& getDiete(){
+    virtual Diete& getDiete(){
         return diete;
     }
     
