@@ -1,3 +1,12 @@
+/*
+ * TP1 CPP
+ * Myriam Thivierge
+ * groupe 291
+ * 
+*/
+
+
+
 #include <iostream>
 #include <string>
 #include "animaux.h"
