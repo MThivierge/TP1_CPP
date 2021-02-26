@@ -23,6 +23,10 @@ public:
         return diete;
     }
     
+    std::string getNom(){
+        return nom;
+    }
+    
     //Destructeur
     virtual ~Animaux(){}
 };
