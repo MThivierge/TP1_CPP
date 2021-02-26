@@ -11,5 +11,11 @@ Tigre::Tigre(std::string nom, double poids) :
 void Tigre::afficherInfos(){
     std::cout<<"Tigre : ";
     Animaux::afficherInfos();
+}
+
+//Getters
+Diete& Tigre::getDiete(){
+    std::cout<<"\tDiete carnivore:"<<std::endl;
     diete.afficherDiete();
+    return diete;
 }

@@ -3,6 +3,7 @@
 #include "tigre.h"
 #include "singe.h"
 #include "rhinoceros.h"
+#include "Diete.h"
 
 
 int main()
@@ -103,12 +104,14 @@ int main()
                 double total_viande = 0.0;
                 double total_fruits = 0.0;
                 double total_herbe = 0.0;
-                std::cout<<"Compte-rendu du parc:"<<std::endl;
+                std::cout<<"*Compte-rendu du parc*"<<std::endl;
                 for(int i=0 ; i<nb_animaux ; i++){
                     animaux_du_parc[i]->afficherInfos();
-                    total_viande += animaux_du_parc[i]->getDiete().getQuantiteViande();
-                    total_fruits += animaux_du_parc[i]->getDiete().getQuantiteFruits();
-                    total_herbe += animaux_du_parc[i]->getDiete().getQuantiteHerbe();
+                    
+                    Diete diete = animaux_du_parc[i]->getDiete();
+                    total_viande += diete.getQuantiteViande();
+                    total_fruits += diete.getQuantiteFruits();
+                    total_herbe += diete.getQuantiteHerbe();
                 }
                 
                 std::cout<<"Diete quotidienne totale : "<<std::endl;
@@ -136,5 +139,6 @@ int main()
     
     for(int i=0 ; i<nb_animaux ; i++){
         delete animaux_du_parc[i];
+        animaux_du_parc[i]=NULL;
     }
 }

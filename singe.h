@@ -17,9 +17,7 @@ class Singe : public Animaux{
         void afficherInfos();
         
         //Getters
-        Diete& getDiete(){
-            return diete;
-        }
+        Diete& getDiete();
         
         //Destructeur
         ~Singe(){

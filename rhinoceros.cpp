@@ -29,5 +29,11 @@ void Rhinoceros::afficherInfos(){
     std::cout<<"Rhinoceros : ";
     Animaux::afficherInfos();
     std::cout<<"\tEnclos de "<< espace_enclos <<" metres-carres"<<std::endl;
+}
+
+//Getters
+Diete& Rhinoceros::getDiete(){
+    std::cout<<"\tDiete herbivore:"<<std::endl;
     diete.afficherDiete();
+    return diete;
 }

@@ -25,6 +25,11 @@ void Singe::afficherInfos(){
     else{
         std::cout<<"\tEnclos sans herbe"<<std::endl;
     }
-    
+}
+
+//Getters
+Diete& Singe::getDiete(){
+    std::cout<<"\tDiete omnivore:"<<std::endl;
     diete.afficherDiete();
+    return diete;
 }

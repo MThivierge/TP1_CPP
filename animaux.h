@@ -24,9 +24,7 @@ public:
     }
     
     //Destructeur
-    virtual ~Animaux(){
-        //std::cout<<"Objet Animal detruit"<<std::endl;
-    };
+    virtual ~Animaux(){}
 };
 
 #endif //__ANIMAUX_H__
