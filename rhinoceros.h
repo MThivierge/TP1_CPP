@@ -1,9 +1,8 @@
 #ifndef __RHINOCEROS_H__clTabCtrl
 #define __RHINOCEROS_H__
 
-#include <iostream>
+#include <string>
 #include "animaux.h"
-#include "diete.h"
 
 class Rhinoceros : public Animaux{
     private:
@@ -21,7 +20,7 @@ class Rhinoceros : public Animaux{
         
         //Destructeur
         ~Rhinoceros(){
-            std::cout<<this->nom<<" a ete enleve"<<std::endl;
+            std::cout<<this->nom<<" a ete enleve du parc."<<std::endl;
         };
 };
 

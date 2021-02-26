@@ -3,7 +3,6 @@
 
 #include <iostream>
 #include "animaux.h"
-#include "diete.h"
 
 class Tigre : public Animaux{  
     public:
@@ -18,7 +17,7 @@ class Tigre : public Animaux{
         
         //Destructeur
         ~Tigre(){
-            std::cout<<this->nom<<" a ete enleve"<<std::endl;
+            std::cout<<this->nom<<" a ete enleve du parc."<<std::endl;
         };
 };
 

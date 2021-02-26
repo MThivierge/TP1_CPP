@@ -1,7 +1,7 @@
 #ifndef __DIETE_H__
 #define __DIETE_H__
 
-#include<iostream>
+#include <iostream>
 
 class Diete{
     private:
@@ -11,10 +11,8 @@ class Diete{
         double quantite_herbe;
         
     public:
-        //Constructeur par défaut
+        //Constructeur
         Diete();
-        //Constructeur avec paramètres
-        //Diete(double quantite_viande, double quantite_fruits, double quantite_herbe);
         
         //Affichage
         void afficherDiete();
@@ -46,9 +44,7 @@ class Diete{
         }
         
         //Destructeur
-        ~Diete(){
-            //std::cout<<"Objet Diete detruit"<<std::endl;
-        }
+        ~Diete(){}
 };
 
 #endif //__DIETE_H__

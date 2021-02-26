@@ -11,7 +11,7 @@ int main()
 {
     const int TAILLE_TABLEAU = 250;
     Animaux* animaux_du_parc[TAILLE_TABLEAU];
-    int nb_animaux = 0;
+    int nb_animaux = 0; //Pour savoir combien d'animaux se trouve dans le parc
     int choix_menu = 0;
     
     
@@ -26,7 +26,7 @@ int main()
         std::cout<<"Entrez le chiffre correspondant a votre choix: ";
         std::cin>> choix_menu;
         
-        std::cout<<""<<std::endl;
+        std::cout<<""<<std::endl; //Espacement pour une meilleure lisibilité
         
         switch(choix_menu){
             case 1:{
@@ -103,11 +103,11 @@ int main()
             }
             case 4:{
                 if(nb_animaux>0){
-                    do{
                         std::string animal_a_enlever;
                         bool animal_trouve = false;
-                        bool retour_menu = true;
-                        std::cout<<"Entrez le nom de l'animal que vous voulez enlever (sans espaces): "<<std::endl;
+                        
+                        std::cout<<"*Enlever un animal*"<<std::endl;
+                        std::cout<<"Entrez le nom de l'animal a enlever (sans espaces): ";
                         std::cin>> animal_a_enlever;
                         
                         for(int i=0 ; (i<nb_animaux) && (!animal_trouve); i++){
@@ -119,27 +119,18 @@ int main()
                                 animaux_du_parc[i]=animaux_du_parc[nb_animaux-1];
                                 animaux_du_parc[nb_animaux-1] = NULL;
                             }
-                        } //Fin boucle for
+                        } //Fin de la boucle for
                         
                         if(animal_trouve){
                             nb_animaux--;
-                            std::cout<<"Voulez-vous retourner au menu ou entrer un autre nom?"<<std::endl;
-                            std::cout<<"(1=Revenir au menu / 0=Entrer un autre nom): ";
-                            std::cin>> retour_menu;
                         }
                         else{
-                            std::cout<<"Il semblerait que le parc n'a aucun animal du nom de "<<animal_a_enlever<<"."<<std::endl;
-                            std::cout<<"Voulez-vous retourner au menu ou entrer un autre nom?"<<std::endl;
-                            std::cout<<"(1=Revenir au menu / 0=Entrer un autre nom): ";
-                            std::cin>> retour_menu;
+                            std::cout<<"Il semblerait que le parc n'a aucun animal du nom de "<<animal_a_enlever<<"!"<<std::endl;
                         }
-                    
-                    }while(!retour_menu);
-                    
                 }//Fin de if(nb_animaux>0)
                 
                 else{
-                    std::cout<<"Le parc ne contient pas encore d'animaux!"
+                    std::cout<<"Le parc n'a pas encore d'animaux!"<<std::endl;
                 }
                 
                 break;
@@ -179,11 +170,11 @@ int main()
             }
         }; //Fin du switch
         
-        std::cout<<""<<std::endl; //Espacement entre les choix pour une meilleure lisibilité
+        std::cout<<""<<std::endl; 
         
     }while(choix_menu != 6);
     
-    //Destruction dynamique des objets
+    //Destruction dynamique des objets créés
     for(int i=0 ; i<nb_animaux ; i++){
         delete animaux_du_parc[i];
         animaux_du_parc[i]=NULL;
